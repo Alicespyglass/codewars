@@ -32,7 +32,17 @@
 
   def solution(n)
     # convert number to binary
-    n.to_s(2)
-    # count number of 1's
-
+    binary = n.to_s(2)
+    # regex - map digits between 1 into array, remove 1's
+    gaps = binary.scan(/1?0+1/).map do |string|
+      string.gsub('1', '')
+    end
+    # find largest in array
+    max_gap = gaps.max
+    # count if max gap exists, else return 0
+    if max_gap != nil
+      max_count = max_gap.count "0"
+    else
+      max_count = 0
+    end
   end
