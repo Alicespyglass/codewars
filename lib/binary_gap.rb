@@ -30,10 +30,9 @@
 # Binary gap is a zero between 2x 1
 #
 
+  def solution(n)
+    # convert number to binary
+    n.to_s(2)
+    # count number of 1's
 
-def solution(n)
-  # convert number to binary
-  n.to_s(2)
-  # count number of 1's
-
-end
+  end
