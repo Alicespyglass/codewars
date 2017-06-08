@@ -27,10 +27,9 @@ def snail(array)
     if @arr.count != 0
       # put last array into final array reversed (i.e. anti-clockwise)
       @final_arr << @arr.pop.reverse
-      count = @arr.count
       i = 0
       # shift first number of each array from bottom up
-      while i < count -1
+      while i < @arr.count -1
         @final_arr << @arr[count-i-1].shift
         i += 1
       end

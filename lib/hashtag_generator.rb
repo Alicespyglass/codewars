@@ -17,21 +17,19 @@ Example Input to Output:
 
 def generateHashtag(str)
 # Turn string to array
-  final = ""
-  word_array = str.split(" ")
 # loop each word
-  word_array.each do |word|
+  word_array = str.split(" ").each do |word|
 # capitalise each word
-    word = word.capitalise
+    word.capitalize!
   end
 # put into string with no spaces
 # add hashtag at the beginning
   final = "#" + word_array.join
 # if string < 2 or >140, return false
-  if final.length < 2 || final.length > 140
+  if (final.length == 1) || (final.length > 140)
     result = false
   else
     result = final
   end
-  final
+  result
 end
