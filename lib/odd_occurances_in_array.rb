@@ -38,5 +38,6 @@ def odd_array_solution(a)
   a.each do |integer|
     counts[integer] += 1
   end
-  counts.key(counts.values.min)
+  odd_occurance = counts.select { |key, value| value.odd?}
+  return odd_occurance.first[0]
 end
