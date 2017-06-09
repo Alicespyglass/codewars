@@ -33,7 +33,6 @@
 
 
 def odd_array_solution(a)
-
   counts = Hash.new 0
   a.each do |integer|
     counts[integer] += 1
