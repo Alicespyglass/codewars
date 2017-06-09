@@ -30,7 +30,7 @@
 # Binary gap is a zero between 2x 1
 #
 
-  def solution(n)
+  def binary_solution(n)
     # convert number to binary
     binary = n.to_s(2)
     # regex - map digits between 1 into array, remove 1's
@@ -45,4 +45,5 @@
     else
       max_count = 0
     end
+    return max_count
   end
